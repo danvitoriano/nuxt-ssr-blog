@@ -1,4 +1,3 @@
-<!-- ./components/posts.vue -->
 <template>
   <section class="main-content">
     <div class="container">
@@ -6,7 +5,7 @@
         Recent Posts.
       </h1>
       <div class="columns is-multiline">
-        <div class="column is-half" v-for="post in posts">
+        <div class="column is-half" v-for="post in posts" :key="post.id">
           <div class="card">
            <header class="card-header">
             <p class="card-header-title">
@@ -18,14 +17,14 @@
               {{ post.summary }}
               <br>
               <small>
-                by <strong>{{ post.author}}</strong> 
+                by <strong>{{ post.author}}</strong>
                 \\ {{ post.published }}
               </small>
             </div>
           </div>
           <footer class="card-footer">
-            <nuxt-link :to="`post/${post.id}`" 
-              class="card-footer-item" append>
+            <nuxt-link :to="`/post/${post.id}`"
+              class="card-footer-item">
               Read More
             </nuxt-link>
           </footer>

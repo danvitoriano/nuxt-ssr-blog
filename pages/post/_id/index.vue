@@ -1,4 +1,3 @@
-<!-- ./pages/post/_id/index.vue -->
 <template>
   <div class="main-content">
     <div class="container">
